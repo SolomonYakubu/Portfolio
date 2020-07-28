@@ -10,9 +10,12 @@ import {
 	faGithub,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+//import { Line } from "rc-progress";
+import { Progress } from "react-sweet-progress";
+import "react-sweet-progress/lib/style.css";
 const Skills = () => {
 	return (
-		<React.Fragment>
+		<div>
 			<strong style={{}} className="aboutStyles">
 				<div
 					style={{
@@ -47,7 +50,185 @@ const Skills = () => {
 				<div className="skills">#Cordova</div> &nbsp;
 				<div className="skills">#Wordpress</div> &nbsp;
 			</div>
-		</React.Fragment>
+			<div>
+				<div
+					style={{
+						borderBottomStyle: "solid",
+						borderWidth: "3px",
+						textAlign: "left",
+						width: "100px",
+						paddingTop: "10px",
+						fontSize: "18px",
+						color: "#696969",
+					}}
+					className="aboutStyles"
+				>
+					<strong>In Details</strong>
+				</div>
+				<br />
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+					}}
+				>
+					<div style={{ textAlign: "center" }} className="skillProgress">
+						Javascript & jQuery
+					</div>
+
+					<Progress
+						percent={92}
+						status="active"
+						theme={{
+							active: {
+								color: "fuchsia",
+								width: "20px",
+							},
+						}}
+					/>
+				</div>
+				<br />
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+					}}
+				>
+					<div style={{ textAlign: "center" }} className="skillProgress">
+						HTML,CSS,Bootstrap & SASS
+					</div>
+
+					<Progress
+						percent={96}
+						status="active"
+						theme={{
+							active: {
+								color: "fuchsia",
+								width: "20px",
+							},
+						}}
+					/>
+				</div>
+				<br />
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+					}}
+				>
+					<div style={{ textAlign: "center" }} className="skillProgress">
+						Node.js/ExpressJs & NextJS
+					</div>
+
+					<Progress
+						percent={75}
+						status="active"
+						theme={{
+							active: {
+								color: "fuchsia",
+								width: "20px",
+							},
+						}}
+					/>
+				</div>
+				<br />
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+					}}
+				>
+					<div style={{ textAlign: "center" }} className="skillProgress">
+						ReactJs/Redux
+					</div>
+
+					<Progress
+						percent={85}
+						status="active"
+						theme={{
+							active: {
+								color: "fuchsia",
+								width: "20px",
+							},
+						}}
+					/>
+				</div>
+				<br />
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+					}}
+				>
+					<div style={{ textAlign: "center" }} className="skillProgress">
+						Databases: MongoDB, MySQL
+					</div>
+
+					<Progress
+						percent={78}
+						status="active"
+						theme={{
+							active: {
+								color: "fuchsia",
+								width: "20px",
+							},
+						}}
+					/>
+				</div>
+				<br />
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+					}}
+				>
+					<div style={{ textAlign: "center" }} className="skillProgress">
+						Hybrid Apps - Cordova,Phonegap & Ionic
+					</div>
+
+					<Progress
+						percent={80}
+						status="active"
+						theme={{
+							active: {
+								color: "fuchsia",
+								width: "20px",
+							},
+						}}
+					/>
+				</div>
+				<br />
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+					}}
+				>
+					<div style={{ textAlign: "center" }} className="skillProgress">
+						C++ & Java
+					</div>
+
+					<Progress
+						percent={71}
+						status="active"
+						theme={{
+							active: {
+								color: "fuchsia",
+								width: "20px",
+							},
+						}}
+					/>
+				</div>
+				<br />
+			</div>
+		</div>
 	);
 };
 
@@ -170,17 +351,33 @@ function Content(props) {
 						paddingBottom: "20px",
 					}}
 				>
-					<FontAwesomeIcon icon={faFacebook} className="socialIcon" size="lg" />
+					<a href="http://www.facebook.com/solomon.yakubu.313">
+						<FontAwesomeIcon
+							icon={faFacebook}
+							className="socialIcon"
+							size="lg"
+						/>
+					</a>
 					&nbsp;
-					<FontAwesomeIcon icon={faTwitter} className="socialIcon" size="lg" />
+					<a href="http://www.twitter.com/@King__Solo">
+						<FontAwesomeIcon
+							icon={faTwitter}
+							className="socialIcon"
+							size="lg"
+						/>
+					</a>
 					&nbsp;
-					<FontAwesomeIcon
-						icon={faInstagram}
-						className="socialIcon"
-						size="lg"
-					/>
+					<a href="http://www.instagram.com/solomonyakubu34">
+						<FontAwesomeIcon
+							icon={faInstagram}
+							className="socialIcon"
+							size="lg"
+						/>
+					</a>
 					&nbsp;
-					<FontAwesomeIcon icon={faGithub} className="socialIcon" size="lg" />
+					<a href="http://www.github.com/Solomon-Yakubu">
+						<FontAwesomeIcon icon={faGithub} className="socialIcon" size="lg" />
+					</a>
 					&nbsp;
 				</div>
 			</div>
@@ -210,9 +407,10 @@ function Content(props) {
 					</p>
 				</div>
 				<br />
+				<br />
 
 				<div className="divCon" style={{}}>
-					<div className="mySkill">
+					<div className="mySkill" style={{ paddingBottom: "25px" }}>
 						<Skills />
 					</div>
 				</div>
