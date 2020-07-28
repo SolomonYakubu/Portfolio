@@ -1,0 +1,327 @@
+.App {
+	text-align: center;
+	height: fit-content;
+}
+.bigContainer {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+}
+.socialIcon {
+	color: blue;
+}
+.link {
+	font-size: 20px;
+	text-decoration: none;
+	color: #0080ff;
+	font-family: "Comic sans MS", "Comic sans", cursive;
+	border-style: solid;
+	border-color: #0080ff;
+	background-color: #fff;
+	border-radius: 10px;
+	outline: none;
+}
+.link:hover {
+	color: #696969;
+}
+/* .link:focus {
+	background-color: aqua;
+} */
+.header {
+	display: flex;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 60px;
+	justify-content: flex-end;
+	background-color: #fff;
+	box-shadow: 0px 6px 4px -6px #696969;
+	border: none;
+	z-index: 2;
+	opacity: 96%;
+}
+.icon {
+	z-index: 2;
+	color: #0080ff;
+}
+.linkDiv {
+	display: flex;
+	justify-content: space-around;
+
+	border: none;
+	align-items: center;
+	width: 60%;
+}
+
+@media (min-width: 891px) {
+	.container {
+		height: auto;
+		background-color: #f4f4f4;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		padding-top: 120px;
+		padding-bottom: 100px;
+		padding-left: 180px;
+
+		/* align-content: space-around; */
+
+		/* background-image: linear-gradient(326deg, #a4508b 20%, #5f0a87 74%); */
+	}
+	.profile {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		align-self: flex-start;
+		width: auto;
+
+		left: 50px;
+	}
+	.contentDiv {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.profileStyles {
+		font-size: 17px;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: 50;
+		color: #262626;
+		line-height: 25px;
+		text-align: center;
+	}
+	.aboutStyles {
+		color: #0080ff;
+		font-size: 35px;
+	}
+	.aboutP {
+		text-align: left;
+		font-size: 22px;
+		font-family: verdana, san-serif;
+		color: #262626;
+	}
+
+	.skillContainer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding-bottom: 30px;
+		align-items: center;
+	}
+	.skills {
+		color: #262626;
+		padding: 10px;
+		background-color: #dcdcdc;
+		border-radius: 30px;
+		font-size: 18px;
+		margin-top: 20px;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		border: none;
+	}
+	.personalInfo {
+		font-size: 17px;
+		font-weight: 540;
+	}
+	.intro {
+		font-size: 18px;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: bold;
+		color: #262626;
+	}
+}
+
+.divCon {
+	box-shadow: 5px 5px 20px -5px #696969;
+	border-radius: 10px;
+	height: auto;
+	align-self: center;
+	padding: 20px 40px 20px 40px;
+	width: 50%;
+	background-color: #fff;
+}
+
+.btnOpt {
+	display: none;
+}
+.optCon {
+	display: none;
+}
+
+@media (max-width: 890px) {
+	/* .container {
+		height: auto;
+		background-color: #f4f4f4;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		background-image: linear-gradient(326deg, #a4508b 20%, #5f0a87 74%);
+	}  */
+	.divCon {
+		box-shadow: 0px 5px 10px -5px #696969;
+		border-radius: 5px;
+		height: auto;
+		width: 76%;
+		background-color: #fff;
+		overflow: hidden;
+		transition: transform 0.5s ease;
+	}
+	.divCon:hover {
+		transform: scale(1.05);
+	}
+	.link {
+		display: none;
+	}
+	.btnOpt {
+		display: block;
+	}
+
+	.optCon {
+		background-color: #fff;
+		height: 60vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		align-self: flex-end;
+		width: 60%;
+		/* box-shadow: -5px 5px 20px -5px #696969; */
+		padding-top: 5px;
+		padding-bottom: -100px;
+		margin: 0;
+
+		position: fixed;
+		opacity: 97%;
+		right: 0px;
+		top: 40px;
+		z-index: 1;
+		height: 70vh;
+		/* transform: width(-50%); */
+		transition: width 0.2s linear;
+		/* animation: ease-out 2s ease-in-out; */
+	}
+
+	.optCon.close {
+		/* transform: width(100%); */
+		width: 0;
+		transition: width 0.2s linear;
+		/* display: none; */
+	}
+
+	.optLink {
+		text-decoration: none;
+		font-size: 15px;
+		color: grey;
+		font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+			"Lucida Sans Unicode", Geneva, Verdana, monospace;
+		font-weight: bold;
+		background: none;
+		border: none;
+		outline: none;
+	}
+	.optLink:hover {
+		color: rgb(79, 146, 209);
+	}
+	.optLink:focus {
+		color: rgb(79, 146, 209);
+		text-decoration-line: underline;
+		text-decoration-thickness: 2px;
+	}
+
+	.opt {
+		width: 70%;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 20px;
+		align-items: flex-start;
+	}
+	.header {
+		height: 40px;
+		padding: 5px;
+	}
+	.container {
+		padding-top: 60px;
+		padding-bottom: 100px;
+
+		height: auto;
+		background-color: #f4f4f4;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		padding-top: 80px;
+		padding-bottom: 100px;
+	}
+	.contentDiv {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+	.profile {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+	.profileStyles {
+		font-size: 14px;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: 300;
+		color: #262626;
+		line-height: 30px;
+	}
+	.aboutStyles {
+		color: #0080ff;
+		font-size: 25px;
+	}
+	.aboutP {
+		text-align: left;
+		font-size: 17px;
+		font-family: verdana, san-serif;
+		color: #262626;
+	}
+
+	.skillContainer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding-bottom: 30px;
+		align-items: center;
+	}
+	.skills {
+		color: #262626;
+		padding: 7px;
+		background-color: #dcdcdc;
+		border-radius: 30px;
+		font-family: fantasy;
+		font-size: 15px;
+		margin-top: 20px;
+	}
+	.personalInfo {
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.intro {
+		font-size: 20px;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: bold;
+		color: #262626;
+	}
+}
