@@ -8,22 +8,24 @@
 	height: fit-content;
 }
 .socialIcon {
-	color: blue;
+	color: #000;
 }
 .link {
-	font-size: 20px;
+	font-size: 17px;
 	text-decoration: none;
-	color: #0080ff;
-	font-family: "Comic sans MS", "Comic sans", cursive;
-	border-style: solid;
-	border-color: #0080ff;
+	color: #1f2041;
+	font-family: serif;
 	background-color: #fff;
-	border-radius: 10px;
+	border: none;
 	outline: none;
 }
 .link:hover {
-	color: #696969;
+	/* color: #0008ff; */
+	transform: scale(1.12);
 }
+/* .link:focus {
+	color: #60935d;
+} */
 /* .link:focus {
 	background-color: aqua;
 } */
@@ -39,25 +41,57 @@
 	box-shadow: 0px 6px 4px -6px #696969;
 	border: none;
 	z-index: 2;
-	opacity: 96%;
+	opacity: 90%;
+	-moz-opacity: 90%;
+	filter: alpha(opacity = 50);
+	zoom: 1;
 }
 .icon {
 	z-index: 2;
-	color: #0080ff;
+	color: #1f2041;
 }
+
 .linkDiv {
 	display: flex;
 	justify-content: space-around;
 
 	border: none;
 	align-items: center;
-	width: 60%;
+	width: 50%;
+}
+
+.skills {
+	color: #1f1f1f;
+	font-family: monaco;
+	background-color: #f2f2f2;
+	border-radius: 30px;
+}
+.aboutStyles {
+	color: #4b3f72;
+	font-family: "Bradley Hand", cursive;
+	-moz-font-family: "Bradley Hand", cursive;
+	text-align: center;
+	font-weight: 700;
+}
+.aboutP {
+	font-size: 15px;
+	font-family: candara, palatino, optima, verderna;
+	padding: 0;
+	margin: 0;
+	font-weight: 300;
+	color: #1f1f1f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.skillContainer {
+	padding: 10px;
 }
 
 @media (min-width: 891px) {
 	.container {
 		height: auto;
-		background-color: #f4f4f4;
+		background-color: #f7f7f7;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -93,37 +127,33 @@
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-weight: 50;
-		color: #262626;
-		line-height: 25px;
+		color: #000;
+		line-height: 10px;
 		text-align: center;
 	}
 	.aboutStyles {
-		color: #0080ff;
+		/* color: #0080ff; */
 		font-size: 35px;
+		text-align: left;
 	}
 	.aboutP {
-		text-align: left;
-		font-size: 22px;
-		font-family: verdana, san-serif;
-		color: #262626;
+		align-items: flex-start;
+		font-size: 17px;
 	}
-
 	.skillContainer {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
+		justify-content: center;
 		padding-bottom: 30px;
 		align-items: center;
 	}
 	.skills {
-		color: #262626;
 		padding: 10px;
-		background-color: #dcdcdc;
-		border-radius: 30px;
+
 		font-size: 18px;
 		margin-top: 20px;
-		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-			sans-serif;
+		/* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif; */
 		border: none;
 	}
 	.personalInfo {
@@ -135,25 +165,31 @@
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-weight: bold;
-		color: #262626;
+		color: #000;
 	}
 	.skillProgress {
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-size: 16px;
 		font-weight: 300;
-		color: #262626;
+		color: #000;
 	}
-}
+	.typing {
+		font-size: 14.5px;
+		font-family: cursive;
+		font-weight: bold;
+		color: #000;
+	}
 
-.divCon {
-	box-shadow: 5px 5px 20px -5px #696969;
-	border-radius: 10px;
-	height: auto;
-	align-self: center;
-	padding: 20px 40px 20px 40px;
-	width: 50%;
-	background-color: #fff;
+	.divCon {
+		box-shadow: 5px 5px 20px -5px #696969;
+		border-radius: 10px;
+		height: auto;
+		align-self: center;
+		padding: 30px 40px 30px 40px;
+		width: 50%;
+		background-color: #fff;
+	}
 }
 
 .btnOpt {
@@ -164,26 +200,18 @@
 }
 
 @media (max-width: 890px) {
-	/* .container {
-		height: auto;
-		background-color: #f4f4f4;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-		background-image: linear-gradient(326deg, #a4508b 20%, #5f0a87 74%);
-	}  */
 	.divCon {
-		box-shadow: 0px 5px 10px -5px #696969;
 		border-radius: 5px;
 		height: auto;
-		width: 76%;
+		width: 75%;
 		background-color: #fff;
 		overflow: hidden;
 		transition: transform 0.5s ease;
+		padding: 30px 40px 30px 40px;
 	}
 	.divCon:hover {
-		transform: scale(1.05);
+		transform: scale(1.06);
+		box-shadow: 0px -5px 10px -8px #a9a9a9, 0px 5px 10px -5px #a9a9a9;
 	}
 	.link {
 		display: none;
@@ -209,44 +237,40 @@
 		position: fixed;
 		opacity: 97%;
 		right: 0px;
-		top: 40px;
+		top: 50px;
 		z-index: 1;
-		height: 70vh;
-		/* transform: width(-50%); */
-		transition: width 0.1s linear;
-		/* animation: ease-out 2s ease-in-out; */
+		height: 100vh;
+		transform: translateX(0);
+		transition: transform 0.3s linear;
 	}
 
 	.optCon.close {
-		/* transform: width(100%); */
-		width: 0;
-		transition: width 0.1s linear;
-		/* display: none; */
+		transform: translateX(100%);
+		transition: transform 0.3s linear;
 	}
 
 	.optLink {
 		text-decoration: none;
 		font-size: 15px;
-		color: grey;
-		font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-			"Lucida Sans Unicode", Geneva, Verdana, monospace;
+		color: #1f2041;
+		font-family: Georgia, "Times New Roman", Times, sans-serif;
 		font-weight: bold;
 		background: none;
 		border: none;
 		outline: none;
+		width: auto;
 	}
 	.optLink:hover {
-		color: rgb(79, 146, 209);
-	}
-	.optLink:focus {
-		color: rgb(79, 146, 209);
-		text-decoration-line: underline;
-		text-decoration-thickness: 2px;
+		border-bottom-style: solid;
+		border-top-style: solid;
+		border-width: 0.2px;
+		border-color: 1f2041;
+		transform: scale(1.2);
 	}
 
 	.opt {
 		width: 70%;
-		height: 50%;
+		height: 40%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -262,7 +286,7 @@
 		padding-bottom: 100px;
 
 		height: auto;
-		background-color: #f4f4f4;
+		background-color: #f7f7f7;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -290,54 +314,54 @@
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-weight: 300;
-		color: #262626;
-		line-height: 30px;
+		color: #000;
+		line-height: 20px;
 	}
 	.aboutStyles {
-		color: #0080ff;
-		font-size: 25px;
-	}
-	.aboutP {
-		text-align: left;
-		font-size: 17px;
-		font-family: verdana, san-serif;
-		color: #262626;
+		/* color: #269ccc; */
+		font-size: 30px;
 	}
 
 	.skillContainer {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
+
 		padding-bottom: 30px;
 		align-items: center;
 		margin: auto;
 	}
 	.skills {
-		color: #262626;
+		/* color: #000; */
 		padding: 7px;
-		background-color: #dcdcdc;
+		/* background-color: #e3b1ec; */
 		border-radius: 30px;
-		font-family: fantasy;
-		font-size: 15px;
+
+		font-size: 13px;
 		margin-top: 20px;
 	}
 	.personalInfo {
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 400;
 	}
 	.intro {
 		font-size: 20px;
-		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-			sans-serif;
+		font-family: Georgia, "Times New Roman", Times, serif;
 		font-weight: bold;
-		color: #262626;
+		color: #000;
 	}
 	.skillProgress {
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-size: 14px;
 		font-weight: 300;
-		color: #262626;
+		color: #000;
+	}
+	.typing {
+		font-size: 19px;
+		font-family: cursive;
+		font-weight: 200;
+		color: #000;
 	}
 }

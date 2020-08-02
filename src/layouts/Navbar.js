@@ -22,8 +22,8 @@ function Navbar(props) {
 					left: "15px",
 					zIndex: "4",
 					width: "100px",
-					borderStyle: "groove",
-					borderColor: "#0080ff",
+					borderStyle: "solid",
+					borderColor: "#2a2a72",
 					borderWidth: "2px",
 					height: "20px",
 					display: "flex",
@@ -39,7 +39,8 @@ function Navbar(props) {
 					style={{
 						fontFamily: "'Righteous',cursive",
 						fontSize: "18px",
-						color: "#0080ff",
+						color: "#2a2a72",
+
 						fontWeight: "bold",
 						fontStyle: "italic",
 					}}
@@ -89,7 +90,7 @@ function Navbar(props) {
 							right: "20px",
 							alignSelf: "center",
 							backgroundColor: "#fff",
-							borderColor: "#a6f1a6",
+							borderColor: "#4b37f4",
 							borderStyle: "solid",
 							outline: "none",
 							zIndex: "2",
@@ -107,7 +108,7 @@ function Navbar(props) {
 					>
 						<FontAwesomeIcon
 							icon={props.nav ? faTimes : faBars}
-							style={{ color: "#696969" }}
+							style={{ color: "#4b37f4" }}
 							size="1x"
 						/>
 					</button>

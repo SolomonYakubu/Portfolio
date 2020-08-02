@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import "./App.css";
 import Content from "./components/Content";
 import Navbar from "./layouts/Navbar";
-import Footer from "./layouts/Footer";
-import Login from "./components/Login";
 
 function App() {
 	const [nav, setNav] = useState(false);
@@ -34,8 +32,6 @@ function App() {
 					scrollers={scrollers}
 					displayNav={displayNav}
 				/>
-
-				<Footer />
 			</div>
 		</div>
 	);

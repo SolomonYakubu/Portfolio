@@ -9,9 +9,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import "../App.css";
-import { Button } from "react-scroll";
+
 const Options = (props) => {
-	console.log(props.nav);
 	return (
 		<div className={props.nav ? "optCon" : "optCon close"}>
 			<Router>
