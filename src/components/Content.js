@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import VizSensor from "react-visibility-sensor";
 import "../App.css";
+
 import Options from "./Options";
+import Contact from "./Contact";
+
 import TypingEffect from "react-typing-effect";
 import { scroller } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,18 +14,23 @@ import {
 	faGithub,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-//import { Line } from "rc-progress";
+import {
+	faPhone,
+	faEnvelope,
+	faMapMarker,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
 const Skills = () => {
+	const progColor = "#6d9bf1 ";
 	return (
 		<div>
 			<div style={{}} className="aboutP">
 				<div
 					style={{
 						borderBottomStyle: "solid",
-						borderWidth: "4px",
-						width: "auto",
+
 						padding: "none",
 					}}
 					className="aboutStyles"
@@ -29,7 +38,7 @@ const Skills = () => {
 					My Skills
 				</div>
 			</div>
-			<br />
+			<p></p>
 			<div className="skillContainer">
 				<div className="skills">#HTML</div> &nbsp;
 				<div className="skills">#CSS</div> &nbsp;
@@ -54,7 +63,7 @@ const Skills = () => {
 				<div
 					style={{
 						borderBottomStyle: "solid",
-						borderWidth: "3px",
+						borderWidth: "5px",
 						textAlign: "left",
 						width: "100px",
 						paddingTop: "10px",
@@ -82,7 +91,7 @@ const Skills = () => {
 						status="active"
 						theme={{
 							active: {
-								color: "#60935d",
+								color: progColor,
 								width: "20px",
 							},
 						}}
@@ -105,7 +114,7 @@ const Skills = () => {
 						status="active"
 						theme={{
 							active: {
-								color: "#60935d",
+								color: progColor,
 								width: "20px",
 							},
 						}}
@@ -128,7 +137,7 @@ const Skills = () => {
 						status="active"
 						theme={{
 							active: {
-								color: "#60935d",
+								color: progColor,
 								width: "20px",
 							},
 						}}
@@ -151,7 +160,7 @@ const Skills = () => {
 						status="active"
 						theme={{
 							active: {
-								color: "#60935d",
+								color: progColor,
 								width: "20px",
 							},
 						}}
@@ -174,7 +183,7 @@ const Skills = () => {
 						status="active"
 						theme={{
 							active: {
-								color: "#60935d",
+								color: progColor,
 								width: "20px",
 							},
 						}}
@@ -197,7 +206,7 @@ const Skills = () => {
 						status="active"
 						theme={{
 							active: {
-								color: "#60935d",
+								color: progColor,
 								width: "20px",
 							},
 						}}
@@ -220,7 +229,7 @@ const Skills = () => {
 						status="active"
 						theme={{
 							active: {
-								color: "#60935d",
+								color: progColor,
 								width: "20px",
 							},
 						}}
@@ -244,153 +253,239 @@ function Content(props) {
 		props.displayNav();
 		props.scrollSet(false);
 	}
+
+	const [aboutShow, setAboutShow] = useState(false);
+	const [skillShow, setSkillShow] = useState(false);
+	const [projectShow, setProjectShow] = useState(false);
+	const [contactShow, setContactShow] = useState(false);
+	const [homeShow, setHomeShow] = useState(false);
+
 	return (
 		<div className="container" style={{}}>
-			<Options nav={props.nav} scrollers={props.scrollers} />
-			<div className="profile">
-				<div className="imgCon">
-					<img
-						src={require("../images/profile.jpg")}
-						style={{
-							width: "100px",
-							height: "100px",
-							borderRadius: "170px",
-							borderStyle: "solid",
-							borderColor: "#1f2041",
-							borderWidth: "3px",
-						}}
-					/>
-				</div>
+			<Options
+				nav={props.nav}
+				scrollers={props.scrollers}
+				aboutShow={aboutShow}
+				skillShow={skillShow}
+				projectShow={projectShow}
+				contactShow={contactShow}
+				homeShow={homeShow}
+			/>
+			<VizSensor
+				onChange={(isVisible) => {
+					setHomeShow(isVisible);
+				}}
+			>
+				<div className="profile">
+					<div className="imgCon">
+						<img
+							src={require("../images/profile.jpg")}
+							style={{
+								width: "120px",
+								height: "120px",
+								borderRadius: "50%",
+								borderStyle: "solid",
+								borderColor: "#000",
+								borderWidth: "4px",
+							}}
+						/>
+					</div>
 
-				<p style={{}} className="intro">
-					Hi!&#128075;, I'm{" "}
-					<strong
+					<p style={{}} className="intro">
+						Hi!&#128075;, I'm{" "}
+						<strong
+							style={{
+								// borderColor: "#1464f4",
+								// borderWidth: "10px",
+								// borderBottomStyle: "solid",
+								color: "#000",
+								paddingLeft: "5px",
+								margin: "0",
+								// borderLeftWidth: "0.9px",
+								// borderLeftStyle: "solid",
+							}}
+						>
+							Yakubu Solomon
+						</strong>
+					</p>
+
+					<div style={{ marginBottom: "12px" }} className="typing">
+						<TypingEffect
+							text={[
+								"I'm a Full-Stack web developer",
+								"I'm focused....",
+								"Creative....",
+								"Determined....",
+							]}
+							speed={15}
+							eraseDelay={1500}
+						/>
+					</div>
+					<p style={{ margin: "5px" }}></p>
+					<div
 						style={{
-							borderColor: "#4b3f72",
-							borderWidth: "10px",
-							borderBottomStyle: "solid",
-							color: "#000",
-							paddingLeft: "5px",
-							margin: "0",
-							borderLeftWidth: "0.9px",
-							borderLeftStyle: "solid",
+							display: "flex",
+							justifyContent: "center",
+							width: "auto",
+							marginBottom: "20px",
 						}}
 					>
-						Yakubu Solomon
-					</strong>
-				</p>
-
-				<div style={{}} className="typing">
-					<TypingEffect
-						text={[
-							"I'm a Full-Stack web developer",
-							"I'm focused....",
-							"Creative....",
-							"Determined....",
-						]}
-						speed={15}
-						eraseDelay={1500}
-					/>
-				</div>
-
-				<div style={{ padding: "8px" }} className="profileStyles">
-					<strong className="personalInfo">PERSONAL INFORMATION</strong>
-
-					<p>Birthday: 02 September</p>
-
-					<p>
-						PHONE:{" "}
-						<a href="tel:+2348108405421" style={{ textDecoration: "none" }}>
-							+234 8108405421
+						<a href="http://www.facebook.com/solomon.yakubu.313">
+							<FontAwesomeIcon
+								icon={faFacebook}
+								className="socialIcon"
+								size="2x"
+								style={{ color: "#0d4f8b" }}
+							/>
 						</a>
-					</p>
-
-					<p>
-						MAIL:{" "}
-						<a
-							href="mailto:soloyaks.sy@gmail.com"
-							style={{ textDecoration: "none" }}
-						>
-							soloyaks.sy@gmail.com
+						&nbsp; &nbsp;
+						<a href="http://www.twitter.com/@King__Solo">
+							<FontAwesomeIcon
+								icon={faTwitter}
+								className="socialIcon"
+								size="2x"
+								style={{ color: "#5cacee" }}
+							/>
 						</a>
-					</p>
-					<p>Location: FCT Nigeria</p>
-				</div>
-				<div
-					style={{
-						display: "flex",
-						justifyContent: "center",
-						width: "auto",
-						paddingBottom: "20px",
-					}}
-				>
-					<a href="http://www.facebook.com/solomon.yakubu.313">
-						<FontAwesomeIcon
-							icon={faFacebook}
-							className="socialIcon"
-							size="lg"
-						/>
-					</a>
-					&nbsp; &nbsp;
-					<a href="http://www.twitter.com/@King__Solo">
-						<FontAwesomeIcon
-							icon={faTwitter}
-							className="socialIcon"
-							size="lg"
-						/>
-					</a>
-					&nbsp; &nbsp;
-					<a href="http://www.instagram.com/solomonyakubu34">
-						<FontAwesomeIcon
-							icon={faInstagram}
-							className="socialIcon"
-							size="lg"
-						/>
-					</a>
-					&nbsp; &nbsp;
-					<a href="http://www.github.com/Solomon-Yakubu">
-						<FontAwesomeIcon icon={faGithub} className="socialIcon" size="lg" />
-					</a>
-					&nbsp; &nbsp;
-				</div>
-			</div>
+						&nbsp; &nbsp;
+						<a href="http://www.instagram.com/solomonyakubu34">
+							<FontAwesomeIcon
+								icon={faInstagram}
+								className="socialIcon"
+								style={{
+									background: "#d6249f",
+									borderRadius: "5px",
+									color: "#fff",
+									paddingLeft: "2px",
+									paddingRight: "2px",
+									background:
+										"radial-gradient(circle at 30% 107%, #fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)",
+								}}
+								size="2x"
+							/>
+						</a>
+						&nbsp; &nbsp;
+						<a href="http://www.github.com/Solomon-Yakubu">
+							<FontAwesomeIcon
+								icon={faGithub}
+								className="socialIcon"
+								size="2x"
+								style={{ color: "#000" }}
+							/>
+						</a>
+						&nbsp; &nbsp;
+					</div>
 
-			<div className="contentDiv">
-				<div className="divCon" style={{}}>
-					<div style={{ paddingBottom: "10px" }} className="aboutP">
-						<div
-							style={{
-								borderBottomStyle: "solid",
-								borderWidth: "4px",
-								width: "auto",
-								padding: "none",
-							}}
-							className="aboutStyles"
-						>
-							About Me
-						</div>
-						<p style={{ textAlign: "center" }}>
-							I am a creative full-stack web developer and a Computer
-							Engineering undergraduate. i have a great passion for software
-							development and programming. i am proficient in Javascript and
-							it's libraries/frameworks such as ReactJs, JQuery,
-							Node.js/Expressjs etc. I am also knowledgeable with backend
-							technologies like MYSQL and MongoDB. I offer 2 years of
-							development experience. I learn fast and easily adapt to new
-							technologies. I do not believe in failure, I always work hard to
-							meet my goals.
+					<div style={{}} className="profileStyles">
+						<p style={{ margin: "5px" }}>
+							<a
+								href="tel:+2348108405421"
+								style={{ textDecoration: "none" }}
+								className="conStyle"
+							>
+								<FontAwesomeIcon
+									icon={faPhone}
+									className="socialIcon b"
+									size="lg"
+								/>
+								&nbsp; +234 8108405421
+							</a>
+						</p>
+
+						<p style={{ margin: "5px" }}>
+							<a
+								href="mailto:soloyaks.sy@gmail.com"
+								style={{ textDecoration: "none" }}
+								className="conStyle"
+							>
+								<FontAwesomeIcon
+									icon={faEnvelope}
+									className="socialIcon b"
+									size="lg"
+								/>
+								&nbsp; soloyaks.sy@gmail.com
+							</a>
+						</p>
+						<p style={{ margin: "5px" }}>
+							<FontAwesomeIcon
+								icon={faMapMarker}
+								className="socialIcon b"
+								size="lg"
+							/>
+							&nbsp;{" "}
+							<b className="conStyle" style={{ fontWeight: "200" }}>
+								FCT, Nigeria.
+							</b>
 						</p>
 					</div>
+				</div>
+			</VizSensor>
+			<div className="contentDiv">
+				<div className="divCon" style={{}}>
+					<VizSensor
+						partialVisibility
+						onChange={(isVisible) => {
+							setAboutShow(isVisible);
+						}}
+					>
+						<div
+							style={{
+								paddingBottom: "10px",
+							}}
+							className="aboutP"
+						>
+							<div
+								style={{
+									borderBottomStyle: "solid",
+
+									padding: "none",
+								}}
+								className="aboutStyles"
+							>
+								About Me
+							</div>
+							<p style={{ textAlign: "center" }}>
+								I am a creative full-stack web developer and a Computer
+								Engineering undergraduate. i have a great passion for software
+								development and programming. i am proficient in Javascript and
+								it's libraries/frameworks such as ReactJs, JQuery,
+								Node.js/Expressjs etc. I am also knowledgeable with backend
+								technologies like MYSQL and MongoDB. I offer 2 years of
+								development experience. I learn fast and easily adapt to new
+								technologies. I do not believe in failure, I always work hard to
+								meet my goals.
+							</p>
+						</div>
+					</VizSensor>
 				</div>
 
 				<p style={{ padding: "5px" }}></p>
 
 				<div className="divCon" style={{}}>
 					<div className="mySkill" style={{ paddingBottom: "15px" }}>
-						<Skills />
+						<VizSensor
+							partialVisibility
+							onChange={(isVisible) => {
+								setSkillShow(isVisible);
+							}}
+						>
+							<Skills />
+						</VizSensor>
 					</div>
 				</div>
-				<br />
+				<p style={{ padding: "5px" }}></p>
+				<div className="divCon" style={{}}>
+					<div className="contact" style={{ paddingBottom: "15px" }}>
+						<VizSensor
+							partialVisibility
+							onChange={(isVisible) => {
+								setContactShow(isVisible);
+							}}
+						>
+							<Contact />
+						</VizSensor>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

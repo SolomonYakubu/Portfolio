@@ -19,6 +19,12 @@ const Options = (props) => {
 						value="profile"
 						className="optLink"
 						onClick={(e) => props.scrollers(e.target.value)}
+						style={{
+							borderBottomStyle:
+								props.aboutShow || props.homeShow ? "solid" : null,
+							borderWidth: "3px",
+							borderColor: "#1464f4",
+						}}
 					>
 						<FontAwesomeIcon
 							icon={faHome}
@@ -32,6 +38,11 @@ const Options = (props) => {
 						className="optLink"
 						value="mySkill"
 						onClick={(e) => props.scrollers(e.target.value)}
+						style={{
+							borderBottomStyle: props.skillShow ? "solid" : null,
+							borderWidth: "3px",
+							borderColor: "#1464f4",
+						}}
 					>
 						<FontAwesomeIcon
 							icon={faLightbulb}
@@ -58,6 +69,11 @@ const Options = (props) => {
 						value="contact"
 						onClick={(e) => props.scrollers(e.target.value)}
 						className="optLink"
+						style={{
+							borderBottomStyle: props.contactShow ? "solid" : null,
+							borderWidth: "3px",
+							borderColor: "#1464f4",
+						}}
 					>
 						<FontAwesomeIcon
 							icon={faPhoneSquare}

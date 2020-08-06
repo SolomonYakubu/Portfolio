@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "Poppins";
+	/* font-style: italic;
+	font-weight: 400; */
+	src: url("./poppings/poppins-v12-latin-regular.eot");
+	src: local("Poppings Regular"), local("Poppings-Regular"),
+		url("./poppings/poppins-v12-latin-regular.eot?#iefix")
+			format("embedded-opentype"),
+		url("./poppings/poppins-v12-latin-regular.woff2") format("woff2"),
+		url("./poppings/poppins-v12-latin-regular.woff") format("woff"),
+		url("./poppings/poppins-v12-latin-regular.ttf") format("truetype"),
+		url("./poppings/poppins-v12-latin-regular.svg#Poppings") format("svg");
+}
+
 .App {
 	text-align: center;
 	height: fit-content;
@@ -13,9 +27,9 @@
 .link {
 	font-size: 17px;
 	text-decoration: none;
-	color: #1f2041;
-	font-family: serif;
-	background-color: #fff;
+	color: #fff;
+	font-family: Poppins;
+	background-color: #1464f4;
 	border: none;
 	outline: none;
 }
@@ -37,18 +51,18 @@
 	width: 100%;
 	height: 60px;
 	justify-content: flex-end;
-	background-color: #fff;
-	box-shadow: 0px 6px 4px -6px #696969;
+	background-color: #1464f4;
+
 	border: none;
 	z-index: 2;
-	opacity: 90%;
-	-moz-opacity: 90%;
+	opacity: 95%;
+	-moz-opacity: 95%;
 	filter: alpha(opacity = 50);
 	zoom: 1;
 }
 .icon {
 	z-index: 2;
-	color: #1f2041;
+	color: #fff;
 }
 
 .linkDiv {
@@ -61,33 +75,128 @@
 }
 
 .skills {
-	color: #1f1f1f;
-	font-family: monaco;
-	background-color: #f2f2f2;
+	color: #fff;
+	font-family: Poppins;
+	font-weight: 500;
+	background-color: #6d9bf1;
 	border-radius: 30px;
 }
 .aboutStyles {
-	color: #4b3f72;
-	font-family: "Bradley Hand", cursive;
-	-moz-font-family: "Bradley Hand", cursive;
-	text-align: center;
-	font-weight: 700;
+	border-color: #1464f4;
+	border-width: 6px;
+
+	font-family: Poppins;
+	text-align: left;
+	font-weight: 600;
+	width: 100%;
 }
 .aboutP {
 	font-size: 15px;
-	font-family: candara, palatino, optima, verderna;
+	font-family: Poppins;
 	padding: 0;
 	margin: 0;
-	font-weight: 300;
-	color: #1f1f1f;
+	font-weight: 3h00;
+	color: #000;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 }
 .skillContainer {
 	padding: 10px;
 }
+/*form css*/
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.formItem {
+	display: flex;
+	flex-direction: column;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	justify-content: space-between;
+	align-items: center;
+	width: 92%;
+	align-self: center;
+}
+.formInput {
+	width: 100%;
+	padding: 10px;
+}
+.label {
+	align-self: flex-start;
+	color: #4f4f4f;
+	font-size: 17px;
+	font-family: Poppins;
+	margin-bottom: 7px;
+	margin-left: -10px;
+}
+.btnSubmit {
+	background-color: #fff;
+	border-style: solid;
+	border-color: #3b6aa0;
+	color: #1464f4;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	border-width: 1.5px;
+	/* border-radius: 20px; */
+	align-self: start;
 
+	font-family: Poppins;
+	font-size: 14px;
+	font-weight: 700;
+	padding: auto;
+	margin-left: -10px;
+}
+.formInput.details {
+	border-style: solid;
+	border-color: #3b6aa0;
+	border-width: 1.5px;
+	height: 15px;
+	outline: none;
+	background-color: #bcd2ee;
+	color: #000;
+	font-size: 16px;
+	font-family: Poppins;
+}
+.formInput.message {
+	border: none;
+	height: 100px;
+	font-size: 16px;
+	box-shadow: 1px 1px 7px 0.5px #dcdcdc, -1px -1px 7px 0.5px #dcdcdc;
+	resize: none;
+	outline: none;
+	font-family: Poppins;
+}
+.profileStyles {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #7093db;
+	align-self: center;
+	margin-bottom: 25px;
+	border-width: 2px;
+}
+.conStyle {
+	font-family: Poppins;
+	color: #1f1f1f;
+	outline: none;
+}
+.socialIcon.b {
+	color: #3b6aa0;
+}
+.name {
+	font-family: Poppins;
+	font-size: 18px;
+	color: #fff;
+
+	font-weight: 600;
+	font-style: italic;
+}
 @media (min-width: 891px) {
 	.container {
 		height: auto;
@@ -103,6 +212,9 @@
 		/* align-content: space-around; */
 
 		/* background-image: linear-gradient(326deg, #a4508b 20%, #5f0a87 74%); */
+	}
+	.name {
+		font-size: 22px;
 	}
 	.profile {
 		display: flex;
@@ -162,8 +274,7 @@
 	}
 	.intro {
 		font-size: 18px;
-		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-			sans-serif;
+		font-family: Poppins;
 		font-weight: bold;
 		color: #000;
 	}
@@ -175,8 +286,8 @@
 		color: #000;
 	}
 	.typing {
-		font-size: 14.5px;
-		font-family: cursive;
+		font-size: 14px;
+		font-family: Poppins;
 		font-weight: bold;
 		color: #000;
 	}
@@ -252,8 +363,8 @@
 	.optLink {
 		text-decoration: none;
 		font-size: 15px;
-		color: #1f2041;
-		font-family: Georgia, "Times New Roman", Times, sans-serif;
+		color: #000033;
+		font-family: Poppins;
 		font-weight: bold;
 		background: none;
 		border: none;
@@ -261,10 +372,6 @@
 		width: auto;
 	}
 	.optLink:hover {
-		border-bottom-style: solid;
-		border-top-style: solid;
-		border-width: 0.2px;
-		border-color: 1f2041;
 		transform: scale(1.2);
 	}
 
@@ -286,7 +393,8 @@
 		padding-bottom: 100px;
 
 		height: auto;
-		background-color: #f7f7f7;
+		background-color: #f1f1f1;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -310,12 +418,12 @@
 		padding-bottom: 10px;
 	}
 	.profileStyles {
-		font-size: 14px;
+		font-size: 17px;
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-weight: 300;
 		color: #000;
-		line-height: 20px;
+		line-height: 5px;
 	}
 	.aboutStyles {
 		/* color: #269ccc; */
@@ -329,7 +437,7 @@
 		align-items: center;
 
 		padding-bottom: 30px;
-		align-items: center;
+
 		margin: auto;
 	}
 	.skills {
@@ -347,7 +455,7 @@
 	}
 	.intro {
 		font-size: 20px;
-		font-family: Georgia, "Times New Roman", Times, serif;
+		font-family: Poppins;
 		font-weight: bold;
 		color: #000;
 	}
@@ -359,9 +467,12 @@
 		color: #000;
 	}
 	.typing {
-		font-size: 19px;
-		font-family: cursive;
-		font-weight: 200;
+		font-size: 16px;
+		font-family: Poppins;
+		font-weight: 100;
 		color: #000;
+	}
+	.icon {
+		color: #1464f4;
 	}
 }
