@@ -71,8 +71,10 @@ const Skills = () => {
 			</div>
 			<p></p>
 			<div className="skillContainer">
-				{skills.map((items) => (
-					<div className="skills">{items}</div>
+				{skills.map((items, index) => (
+					<div className="skills" key={index}>
+						{items}
+					</div>
 				))}
 			</div>
 			<div>
@@ -99,7 +101,7 @@ const Skills = () => {
 					}}
 				>
 					{skillProgress.map((items) => (
-						<React.Fragment>
+						<div key={items.id}>
 							<div
 								style={{
 									textAlign: "center",
@@ -121,7 +123,7 @@ const Skills = () => {
 									},
 								}}
 							/>
-						</React.Fragment>
+						</div>
 					))}
 				</div>
 			</div>
@@ -345,7 +347,7 @@ function Content(props) {
 				<p style={{ padding: "5px" }}></p>
 
 				<div className="divCon" style={{}}>
-					<div className="mySkill" style={{ paddingBottom: "15px" }}>
+					<div className="mySkill" style={{ paddingBottom: "25px" }}>
 						<VizSensor
 							partialVisibility
 							onChange={(isVisible) => {
