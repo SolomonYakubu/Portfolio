@@ -44,6 +44,16 @@ const Skills = () => {
 		"#Ionic",
 		"#Cordova",
 	];
+	const skillProgress = [
+		{ skill: "HTML,CSS,Bootstrap&SASS", id: 1, rate: 96 },
+		{ skill: "Javascript & Jquery", id: 2, rate: 92 },
+		{ skill: "Node.js/Express & Next.js", id: 3, rate: 75 },
+		{ skill: "ReactJs/Redux", id: 4, rate: 90 },
+		{ skill: "MongoDB,MySQL & Firebase", id: 5, rate: 80 },
+		{ skill: "Cordova,Phonegap&Ionic", id: 6, rate: 85 },
+		{ skill: "C++ & Java", id: 7, rate: 75 },
+	];
+
 	const progColor = "#6d9bf1 ";
 	return (
 		<div>
@@ -74,13 +84,13 @@ const Skills = () => {
 						width: "100px",
 						paddingTop: "10px",
 						fontSize: "18px",
-						// color: "#000",
+						marginBottom: "15px",
 					}}
 					className="aboutStyles"
 				>
 					<strong>In Details</strong>
 				</div>
-				<br />
+
 				<div
 					style={{
 						display: "flex",
@@ -88,160 +98,32 @@ const Skills = () => {
 						alignItems: "flex-start",
 					}}
 				>
-					<div style={{ textAlign: "center" }} className="skillProgress">
-						Javascript & jQuery
-					</div>
+					{skillProgress.map((items) => (
+						<React.Fragment>
+							<div
+								style={{
+									textAlign: "center",
+									margin: "3px",
+									marginTop: "10px",
+								}}
+								className="skillProgress"
+							>
+								{items.skill}
+							</div>
 
-					<Progress
-						percent={92}
-						status="active"
-						theme={{
-							active: {
-								color: progColor,
-								width: "20px",
-							},
-						}}
-					/>
+							<Progress
+								percent={items.rate}
+								status="active"
+								theme={{
+									active: {
+										color: progColor,
+										width: "20px",
+									},
+								}}
+							/>
+						</React.Fragment>
+					))}
 				</div>
-				<br />
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-					}}
-				>
-					<div style={{ textAlign: "center" }} className="skillProgress">
-						HTML,CSS,Bootstrap & SASS
-					</div>
-
-					<Progress
-						percent={96}
-						status="active"
-						theme={{
-							active: {
-								color: progColor,
-								width: "20px",
-							},
-						}}
-					/>
-				</div>
-				<br />
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-					}}
-				>
-					<div style={{ textAlign: "center" }} className="skillProgress">
-						Node.js/ExpressJs & NextJS
-					</div>
-
-					<Progress
-						percent={75}
-						status="active"
-						theme={{
-							active: {
-								color: progColor,
-								width: "20px",
-							},
-						}}
-					/>
-				</div>
-				<br />
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-					}}
-				>
-					<div style={{ textAlign: "center" }} className="skillProgress">
-						ReactJs/Redux
-					</div>
-
-					<Progress
-						percent={85}
-						status="active"
-						theme={{
-							active: {
-								color: progColor,
-								width: "20px",
-							},
-						}}
-					/>
-				</div>
-				<br />
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-					}}
-				>
-					<div style={{ textAlign: "center" }} className="skillProgress">
-						Databases: MongoDB, MySQL
-					</div>
-
-					<Progress
-						percent={78}
-						status="active"
-						theme={{
-							active: {
-								color: progColor,
-								width: "20px",
-							},
-						}}
-					/>
-				</div>
-				<br />
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-					}}
-				>
-					<div style={{ textAlign: "center" }} className="skillProgress">
-						Hybrid Apps - Cordova,Phonegap & Ionic
-					</div>
-
-					<Progress
-						percent={80}
-						status="active"
-						theme={{
-							active: {
-								color: progColor,
-								width: "20px",
-							},
-						}}
-					/>
-				</div>
-				<br />
-				<div
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-					}}
-				>
-					<div style={{ textAlign: "center" }} className="skillProgress">
-						C++ & Java
-					</div>
-
-					<Progress
-						percent={71}
-						status="active"
-						theme={{
-							active: {
-								color: progColor,
-								width: "20px",
-							},
-						}}
-					/>
-				</div>
-				<br />
 			</div>
 		</div>
 	);
@@ -301,14 +183,9 @@ function Content(props) {
 						Hi!&#128075;, I'm{" "}
 						<strong
 							style={{
-								// borderColor: "#1464f4",
-								// borderWidth: "10px",
-								// borderBottomStyle: "solid",
 								color: "#000",
 								paddingLeft: "5px",
 								margin: "0",
-								// borderLeftWidth: "0.9px",
-								// borderLeftStyle: "solid",
 							}}
 						>
 							Yakubu Solomon
