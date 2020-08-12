@@ -23,6 +23,27 @@ import {
 import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
 const Skills = () => {
+	const skills = [
+		"#HTML",
+		"#CSS",
+		"#Javascript",
+		"#Reactjs",
+		"#Redux",
+		"#Jquery",
+		"#Bootstrap",
+		"#Saas",
+		"#Node.js",
+		"#Express",
+		"#Next.js",
+		"#MongoDb",
+		"#MySQL",
+		"#Firebase",
+		"#C++",
+		"#Java",
+		"#Phonegap",
+		"#Ionic",
+		"#Cordova",
+	];
 	const progColor = "#6d9bf1 ";
 	return (
 		<div>
@@ -40,24 +61,9 @@ const Skills = () => {
 			</div>
 			<p></p>
 			<div className="skillContainer">
-				<div className="skills">#HTML</div> &nbsp;
-				<div className="skills">#CSS</div> &nbsp;
-				<div className="skills">#Javascript</div> &nbsp;
-				<div className="skills">#Node.Js</div> &nbsp;
-				<div className="skills">#ExpressJs</div> &nbsp;
-				<div className="skills">#Saas</div> &nbsp;
-				<div className="skills">#BootStrap</div> &nbsp;
-				<div className="skills">#Reactjs</div> &nbsp;
-				<div className="skills">#Redux</div> &nbsp;
-				<div className="skills">#Jquery</div> &nbsp;
-				<div className="skills">#Nextjs</div> &nbsp;
-				<div className="skills">#MongoDB</div> &nbsp;
-				<div className="skills">#Sqlite</div> &nbsp;
-				<div className="skills">#MySQL</div> &nbsp;
-				<div className="skills">#C++</div> &nbsp;
-				<div className="skills">#Java</div> &nbsp;
-				<div className="skills">#Cordova</div> &nbsp;
-				<div className="skills">#Wordpress</div> &nbsp;
+				{skills.map((items) => (
+					<div className="skills">{items}</div>
+				))}
 			</div>
 			<div>
 				<div
@@ -376,7 +382,7 @@ function Content(props) {
 						&nbsp; &nbsp;
 					</div>
 
-					<div style={{}} className="profileStyles">
+					<div style={{ padding: "5px" }} className="profileStyles">
 						<p style={{ margin: "5px" }}>
 							<a
 								href="tel:+2348108405421"

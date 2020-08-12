@@ -43,7 +43,7 @@ function Navbar(props) {
 			<span className="linkDiv">
 				<button
 					className="link"
-					value="profile"
+					value="aboutStyles"
 					onClick={(e) => props.scrollers(e.target.value)}
 				>
 					<FontAwesomeIcon icon={faHome} className="icon" />
