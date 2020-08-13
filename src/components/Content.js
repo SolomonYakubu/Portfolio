@@ -101,7 +101,15 @@ const Skills = () => {
 					}}
 				>
 					{skillProgress.map((items) => (
-						<div key={items.id}>
+						<div
+							style={{
+								display: "flex",
+								flexDirection: "column",
+								alignItems: "flex-start",
+								width: "100%",
+							}}
+							key={items.id}
+						>
 							<div
 								style={{
 									textAlign: "center",
