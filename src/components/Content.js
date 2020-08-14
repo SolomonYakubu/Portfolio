@@ -1,19 +1,21 @@
 import React, { useState, useEffect, useCallback } from "react";
-import VizSensor from "react-visibility-sensor";
-import "../App.css";
 
+import "../App.css";
 import Options from "./Options";
 import Contact from "./Contact";
 
+import VizSensor from "react-visibility-sensor";
 import TypingEffect from "react-typing-effect";
 import { scroller } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
 	faFacebook,
 	faTwitter,
 	faGithub,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+
 import {
 	faPhone,
 	faEnvelope,
@@ -22,6 +24,7 @@ import {
 
 import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
+
 const Skills = () => {
 	const skills = [
 		"#HTML",
@@ -128,6 +131,9 @@ const Skills = () => {
 									active: {
 										color: progColor,
 										width: "20px",
+										symbol: (
+											<div className="progressFont">{`${items.rate}%`}</div>
+										),
 									},
 								}}
 							/>
@@ -258,7 +264,7 @@ function Content(props) {
 							/>
 						</a>
 						&nbsp; &nbsp;
-						<a href="http://www.github.com/Solomon-Yakubu">
+						<a href="http://www.github.com/SolomonYakubu">
 							<FontAwesomeIcon
 								icon={faGithub}
 								className="socialIcon"
@@ -305,9 +311,9 @@ function Content(props) {
 								className="socialIcon b"
 								size="lg"
 							/>
-							&nbsp;{" "}
+							&nbsp;
 							<b className="conStyle" style={{ fontWeight: "200" }}>
-								FCT, Nigeria.
+								&nbsp; FCT, Nigeria.
 							</b>
 						</p>
 					</div>
