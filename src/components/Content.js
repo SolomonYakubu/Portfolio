@@ -276,7 +276,7 @@ function Content(props) {
 					</div>
 
 					<div style={{ padding: "5px" }} className="profileStyles">
-						<p style={{ margin: "5px" }}>
+						<div style={{ margin: "5px" }}>
 							<a
 								href="tel:+2348108405421"
 								style={{ textDecoration: "none" }}
@@ -289,9 +289,9 @@ function Content(props) {
 								/>
 								&nbsp; +234 8108405421
 							</a>
-						</p>
+						</div>
 
-						<p style={{ margin: "5px" }}>
+						<div style={{ margin: "5px" }}>
 							<a
 								href="mailto:soloyaks.sy@gmail.com"
 								style={{ textDecoration: "none" }}
@@ -304,8 +304,8 @@ function Content(props) {
 								/>
 								&nbsp; soloyaks.sy@gmail.com
 							</a>
-						</p>
-						<p style={{ margin: "5px" }}>
+						</div>
+						<div style={{ margin: "5px" }}>
 							<FontAwesomeIcon
 								icon={faMapMarker}
 								className="socialIcon b"
@@ -315,7 +315,7 @@ function Content(props) {
 							<b className="conStyle" style={{ fontWeight: "200" }}>
 								&nbsp; FCT, Nigeria.
 							</b>
-						</p>
+						</div>
 					</div>
 				</div>
 			</VizSensor>
@@ -358,8 +358,6 @@ function Content(props) {
 					</VizSensor>
 				</div>
 
-				<p style={{ padding: "5px" }}></p>
-
 				<div className="divCon" style={{}}>
 					<div className="mySkill" style={{ paddingBottom: "25px" }}>
 						<VizSensor
@@ -372,7 +370,7 @@ function Content(props) {
 						</VizSensor>
 					</div>
 				</div>
-				<p style={{ padding: "5px" }}></p>
+
 				<div className="divCon" style={{}}>
 					<div className="contact" style={{ paddingBottom: "15px" }}>
 						<VizSensor

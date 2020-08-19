@@ -58,7 +58,7 @@ const Contact = () => {
 	};
 
 	return (
-		<div>
+		<React.Fragment>
 			<div style={{}} className="aboutP">
 				<div
 					style={{
@@ -121,7 +121,7 @@ const Contact = () => {
 					</button>
 				</div>
 			</form>
-		</div>
+		</React.Fragment>
 	);
 };
 
