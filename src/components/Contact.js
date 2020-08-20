@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../App.css";
-import { faResearchgate } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
 	const [state, setState] = useState({

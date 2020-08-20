@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 
 import "../App.css";
 import Options from "./Options";
 import Contact from "./Contact";
 
+import { Progress } from "react-sweet-progress";
+import "react-sweet-progress/lib/style.css";
 import VizSensor from "react-visibility-sensor";
 import TypingEffect from "react-typing-effect";
 import { scroller } from "react-scroll";
@@ -21,9 +23,6 @@ import {
 	faEnvelope,
 	faMapMarker,
 } from "@fortawesome/free-solid-svg-icons";
-
-import { Progress } from "react-sweet-progress";
-import "react-sweet-progress/lib/style.css";
 
 const Skills = () => {
 	const skills = [
@@ -160,7 +159,7 @@ function Content(props) {
 
 	const [aboutShow, setAboutShow] = useState(false);
 	const [skillShow, setSkillShow] = useState(false);
-	const [projectShow, setProjectShow] = useState(false);
+	const [projectShow] = useState(false);
 	const [contactShow, setContactShow] = useState(false);
 	const [homeShow, setHomeShow] = useState(false);
 
@@ -192,11 +191,16 @@ function Content(props) {
 								borderColor: "#000",
 								borderWidth: "4px",
 							}}
+							alt="profile"
 						/>
 					</div>
 
 					<p style={{}} className="intro">
-						Hi!&#128075;, I'm{" "}
+						Hi!
+						<span role="img" aria-labelledby="jsx-a11y/accessible-emoji">
+							&#128075;
+						</span>
+						, I'm{" "}
 						<strong
 							style={{
 								color: "#000",
@@ -252,7 +256,7 @@ function Content(props) {
 								icon={faInstagram}
 								className="socialIcon"
 								style={{
-									background: "#d6249f",
+									backgroundColor: "#d6249f",
 									borderRadius: "5px",
 									color: "#fff",
 									paddingLeft: "2px",
