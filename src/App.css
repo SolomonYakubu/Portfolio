@@ -60,8 +60,6 @@
 	z-index: 2;
 	opacity: 95%;
 	-moz-opacity: 95%;
-	filter: alpha(opacity = 50);
-	zoom: 1;
 }
 .icon {
 	z-index: 2;
